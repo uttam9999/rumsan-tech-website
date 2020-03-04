@@ -146,8 +146,9 @@
     if (typedTarget.length) {
       var typed = new Typed(typedElement, {
         strings: [
-          "Start your business with award winning company.",
-          "Get ready to get summer big discount!"
+          "We are rumsanTech team.",
+          "We uplift your web presence",
+          "We matter your development"
         ],
         typeSpeed: 50,
         backSpeed: 10,

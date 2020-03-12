@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include layouts/meta %>
+
+<head>
+
+</head>
+
+<body>
+    <div class="preLoader"></div>
+    <% include layouts/header %>
+
+    <section class="page-title-wrap position-relative bg-light">
+        <div id="particles_js"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-11">
+                    <div class="page-title position-relative pt-5 pb-5">
+                        <ul class="custom-breadcrumb roboto list-unstyled mb-0 clearfix" data-animate="fadeInUp"
+                            data-delay="1.2">
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="fas fa-angle-double-right"></i></li>
+                            <li><a href="#">Team Members</a></li>
+                        </ul>
+                        <h1 data-animate="fadeInUp" data-delay="1.3">Team Members</h1>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="world-map position-relative"> <img src="img/map.svg" alt="" data-no-retina class="svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-7 pb-5-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8 col-md-10">
+                    <div class="section-title text-center">
+                        <h2 data-animate="fadeInUp" data-delay=".1">Our Team</h2>
+                        <p data-animate="fadeInUp" data-delay=".2">We believe in a diverse range of personnel to bring
+                            creative skills thoughts, and ideas to the table.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row rumsan-team-members">
+
+            </div>
+        </div>
+    </section>
+    <% include layouts/footer %>
+</body>
+
+</html>
+
+<script>
+    let arr = [
+        { name: "Santosh Shrestha", designation: "Chief Technical Officer", img_url: "https://assets.rumsan.com/rumsan-test/santosh-shrestha-rumsantech.jpg", linkedin: "https://www.linkedin.com/in/rumsan/" },
+        { name: "Raktim Shrestha", designation: "Project Manager", img_url: "https://assets.rumsan.com/rumsan-test/raktim-shrestha-rumsantech.jpg", linkedin: "https://www.linkedin.com/in/raktim-shrestha-63a780109/" },
+        { name: "Dipesh Lohani", designation: "Software Developer", img_url: "https://assets.rumsan.com/rumsan-test/dipesh-lohani.jpg", linkedin: "https://www.linkedin.com/in/dipeshlohani/" },
+        { name: "Sheejan Tripati", designation: "Software Developer", img_url: "https://assets.rumsan.com/rumsan-test/default-avatar.jpg	", linkedin: "https://www.linkedin.com/in/sheejan-tripathi-419514106/" },
+        { name: "Apil Pokhrel", designation: "Fullstack Developer", img_url: "https://assets.rumsan.com/rumsan-test/default-avatar.jpg	", linkedin: "https://www.linkedin.com/in/apil-pokharel-77384b15a/" },
+        { name: "Binod Chaudhary", designation: "Fullstack Developer", img_url: "https://assets.rumsan.com/rumsan-test/default-avatar.jpg	", linkedin: "https://www.linkedin.com/in/binod-chaudhary-7ba636b4/" },
+        { name: "Anup Shrestha", designation: "Software Developer", img_url: "https://assets.rumsan.com/rumsan-test/default-avatar.jpg	", linkedin: "#" },
+        { name: "Sailendra Maharjan", designation: "Software Developer", img_url: "https://assets.rumsan.com/rumsan-test/default-avatar.jpg	", linkedin: "#" }
+    ];
+    arr.forEach(el => {
+        $(".rumsan-team-members").append(`
+    <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-member" data-animate="fadeInUp" data-delay="0">
+                        <div class="image-hover-wrap"> <img src="${el.img_url}" alt=" - ${el.name}">
+                            <div
+                                class="image-hover-content d-flex justify-content-center align-items-center text-center">
+                                <ul class="list-inline">
+                                    <li><a href="${el.linkedin}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single-member-info bg-light">
+                            <h4>${el.name}</h4> <span>${el.designation}</span>
+                        </div>
+                    </div>
+                </div>
+    `);
+    });
+</script>

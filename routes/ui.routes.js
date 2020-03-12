@@ -10,4 +10,9 @@ router.get("/team", function(req, res, next) {
   res.render("team", { title: "Our Team - RumsanTech" });
 });
 
+/* GET contact page */
+router.get("/contact", function(req, res, next) {
+  res.render("contact", { title: "Contact Us - RumsanTech" });
+});
+
 module.exports = router;

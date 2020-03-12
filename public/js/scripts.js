@@ -167,12 +167,12 @@
     }
     var colorSheets = [
       {
-        color: "#7cd273",
+        color: "#179bd7",
         title: "Switch to color-1",
         href: "css/colors/theme-color-1.css"
       },
       {
-        color: "#ff6c00",
+        color: "#179bd7",
         title: "Switch to color-2",
         href: "css/colors/theme-color-2.css"
       },
